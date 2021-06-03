@@ -1,3 +1,1 @@
-@ECHO OFF
-echo "gggg /s /f /t 2"
-PAUSE
+
