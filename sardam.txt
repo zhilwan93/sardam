@@ -1,2 +1,2 @@
-@ECHO off
-echo "zhilwan"
+@echo off
+%SystemRoot%\explorer.exe "
