@@ -1,6 +1,4 @@
 @echo off
-
 echo "Downloading 7-zip"
-echo "DOne"
-
+echo "Done"
 pause
