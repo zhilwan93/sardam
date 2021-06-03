@@ -1,0 +1,6 @@
+@echo off
+
+echo "Downloading 7-zip"
+echo "DOne"
+
+pause
