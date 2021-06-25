@@ -18,5 +18,4 @@ timeout /t 30
 GOTO:START
 
 :Disconnected
-pause
 call  C:\ISO\shutdown.bat
