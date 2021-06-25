@@ -12,10 +12,11 @@ set string=This is my string to work with.
 set string=%string:work=play%
 echo %string%
 
-:Disconnected
-call  C:\ISO\shutdown.bat
-
 ::**********************************************
 
 timeout /t 30
 GOTO:START
+
+:Disconnected
+pause
+call  C:\ISO\shutdown.bat
