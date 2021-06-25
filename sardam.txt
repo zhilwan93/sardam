@@ -10,7 +10,7 @@ ping -n 1 www.google.com | findstr TTL || goto Disconnected
 ::**************************************************************************
 
 :connected
-set string=This is my string to work with.
+set string=Sardam.krd.
 set string=%string:work=play%
 echo %string%
 
