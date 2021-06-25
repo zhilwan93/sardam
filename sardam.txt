@@ -27,6 +27,7 @@ $AllProtocols = [System.Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'; ^
 [System.Net.ServicePointManager]::SecurityProtocol = $AllProtocols; ^
 (New-Object System.Net.WebClient).DownloadFile('%1','%2') 
 exit /b
+pause
 ::*************************************************************************
 
 timeout /t 30
