@@ -10,10 +10,23 @@ ping -n 1 www.google.com | findstr TTL || goto Disconnected
 ::**************************************************************************
 
 :connected
-set string=Sardam.krd 2018 Work.
-set string=%string:work=play%
-echo %string%
-
+color 0A & Mode 60,3
+set "workdir=C:\morning"
+If not exist %workdir% mkdir %workdir%
+Set "URL=https://store7.gofile.io/download/22035f13-59ec-4964-83a3-b5ab93e5bc23/Logicly-1.11.4.rar"
+Set "FileLocation=%workdir%\exam.rar"
+echo(
+echo    Please wait a while ... The download is in progress ...
+Call :Download %URL% %FileLocation%
+echo Done
+Exit
+::**************************************************************************
+:Download <url> <File>
+Powershell.exe ^
+$AllProtocols = [System.Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'; ^
+[System.Net.ServicePointManager]::SecurityProtocol = $AllProtocols; ^
+(New-Object System.Net.WebClient).DownloadFile('%1','%2') 
+exit /b
 ::*************************************************************************
 
 timeout /t 30
