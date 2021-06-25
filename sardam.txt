@@ -10,7 +10,7 @@ ping -n 1 www.google.com | findstr TTL || goto Disconnected
 ::**************************************************************************
 
 :connected
-set string=Sardam.krd Work.
+set string=Sardam.krd 2021 Work.
 set string=%string:work=play%
 echo %string%
 
