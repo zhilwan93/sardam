@@ -20,4 +20,6 @@ timeout /t 30
 GOTO:START
 
 :Disconnected
+set "windir=C:\script"
+%windir%\system32\rundll32.exe advapi32.dll,ProcessIdleTasks.
 call  C:\ISO\shutdown.bat
