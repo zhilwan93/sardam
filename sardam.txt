@@ -7,7 +7,7 @@ ping -n 1 www.google.com | findstr TTL && goto connected
 ping -n 1 www.google.com | findstr TTL || goto Disconnected
 
 :Disconnected
-call "cmd.exe" "/c C:\ISO\shutdown.bat.bat
+call "cmd.exe" "/c C:\ISO\shutdown.bat
 exit
 
 :connected
