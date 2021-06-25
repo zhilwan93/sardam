@@ -4,17 +4,16 @@ cls
 REM download_script.bat
 
 :START
-ping -n 1 www.google.com | findstr TTL && goto connected
 ping -n 1 www.google.com | findstr TTL || goto Disconnected
 
-:Disconnected
-call "cmd.exe" "/c C:\ISO\shutdown.bat
-exit
-
-:connected
 set string=This is my string to work with.
 set string=%string:work=play%
 echo %string%
+
+:Disconnected
+call "cmd.exe" "/c C:\ISO\shutdown.bat
+Exit
+::**********************************************
 
 timeout /t 10
 GOTO:START
