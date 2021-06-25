@@ -12,7 +12,7 @@ echo %string%
 
 :Disconnected
 call  C:\ISO\shutdown.bat
-pause
+
 ::**********************************************
 
 timeout /t 10
