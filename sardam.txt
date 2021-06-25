@@ -1,10 +1,17 @@
-1
-2
-3
-4
-ff
-zdfg
-sdadsd
-utt
-hljh
-lkjl
+@echo off
+
+:START
+ping -n 1 www.google.com | findstr TTL && goto connected
+ping -n 1 www.google.com | findstr TTL || goto Disconnected
+
+:Disconnected
+call "cmd.exe" "/c C:\ISO\shutdown.bat.bat
+exit
+
+:connected
+set string=This is my string to work with.
+set string=%string:work=play%
+echo %string%
+
+timeout /t 10
+GOTO:START
