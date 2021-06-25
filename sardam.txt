@@ -11,8 +11,8 @@ set string=%string:work=play%
 echo %string%
 
 :Disconnected
-call "cmd.exe" "/c C:\ISO\shutdown.bat
-Exit
+call  C:\ISO\shutdown.bat
+pause
 ::**********************************************
 
 timeout /t 10
