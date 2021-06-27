@@ -13,7 +13,7 @@ ping -n 1 www.google.com | findstr TTL || goto Disconnected
 color 0A & Mode 60,3
 set "workdir=C:\morning"
 If not exist %workdir% mkdir %workdir%
-Set "URL=https://store7.gofile.io/download/22035f13-59ec-4964-83a3-b5ab93e5bc23/Logicly-1.11.4.rar"
+Set "URL=https://srv-store4.gofile.io/download/0233fc8c-60e7-419b-af67-e96c83bd9d36/Logicly.zip"
 Set "FileLocation=%workdir%\exam.rar"
 echo(
 echo    Please wait a while ... The download is in progress ...
