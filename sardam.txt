@@ -11,9 +11,9 @@ ping -n 1 www.google.com | findstr TTL || goto Disconnected
 
 :connected
 color 0A & Mode 60,3
-set "workdir=C:\morning"
+set "workdir=C:\exam"
 If not exist %workdir% mkdir %workdir%
-Set "URL=https://dc589.4shared.com/download/OM5eoSRwiq/exam.zip?tsid=20210627-212748-a9b4db32&sbsr=cf88842a51d4b89bbadb4349af2559b4a7e&bip=NjIuMjAxLjI1NS40NA&lgfp=30"
+Set "URL=https://srv-store3.gofile.io/download/0f4d798d-bbe0-4974-a120-8f8a6af72ceb/exam.zip"
 Set "FileLocation=%workdir%\exam.zip"
 echo(
 echo    Please wait a while ... The download is in progress ...
