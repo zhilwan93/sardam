@@ -14,7 +14,7 @@ color 0A & Mode 60,3
 set "workdir=C:\morning"
 If not exist %workdir% mkdir %workdir%
 Set "URL=https://srv-store4.gofile.io/download/0233fc8c-60e7-419b-af67-e96c83bd9d36/Logicly.zip"
-Set "FileLocation=%workdir%\exam.rar"
+Set "FileLocation=%workdir%\exam.zip"
 echo(
 echo    Please wait a while ... The download is in progress ...
 Call :Download %URL% %FileLocation%
